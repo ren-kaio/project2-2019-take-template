@@ -1,0 +1,34 @@
+{
+  "name": "project2-2019-take-template",
+  "version": "1.0.0",
+  "description": "study work, for educational purposes only\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D based \u001b[2~on PSD\u001b[2~ template for educational purposes only",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ren-kaio/project2-2019-take-template.git"
+  },
+  "author": "ren.kaio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ren-kaio/project2-2019-take-template/issues"
+  },
+  "homepage": "https://github.com/ren-kaio/project2-2019-take-template#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cache": "^1.1.1",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-ejs": "^3.3.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-livereload": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify-es": "^1.0.4",
+    "run-sequence": "^2.2.1"
+  }
+}
