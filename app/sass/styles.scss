@@ -1,16 +1,69 @@
 
+
+//fonts
+
+@font-face {
+  font-family: "OpenSans-Light";
+  src: url("../fonts/OpenSans-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+// mixins
+$text-color--light: #fff;
+$text-color--dark: #8796a5;
+
+
+@mixin text-style {
+  color: $text-color--light;
+  font-family: "OpenSans-Light";
+}
+
+// common styles
+
+body {
+  margin: 0;
+}
+
 .wrapper {
-  max-width: 1600px;
+  width: 100%;
+  @media (min-width: 1600px) {
+    max-width: 1600px;
+  }
   margin-left: auto;
   margin-right: auto;
 }
 
 .header {
-  width: 100%;
   height: 20rem;
   background-image: url("../img/landscape.png");
   background-size: cover;
+  padding: 5rem;
 }
+
+.header-heading {
+  font-size: 5rem;
+  @include text-style;
+}
+
+.header__heading { //positioning
+
+}
+
+.header__text { //positioning
+
+}
+
+.header-text {
+  @include text-style;
+  font-size: 1.08rem;
+
+}
+
+
+
+
 
 .tier {
 
