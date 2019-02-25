@@ -10,14 +10,36 @@
 }
 
 
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+
 // mixins
-$text-color--light: #fff;
-$text-color--dark: #8796a5;
+$text-color--lighter: #fff;
+$text-color--light: #939393;
+$text-color: #8796a5;
+$text-color--dark: #282a2a;
 
 
+@mixin lighttext-style--light {
+  color: $text-color--lighter;
+  font-family: "OpenSans-Light";
+}
+@mixin lighttext-style {
+  color: $text-color;
+  font-family: "OpenSans-Light";
+}
+@mixin lighttext-style--dark {
+  color: $text-color--dark;
+  font-family: "OpenSans-Light";
+}
 @mixin text-style {
   color: $text-color--light;
-  font-family: "OpenSans-Light";
+  font-family: "OpenSans";
 }
 
 // common styles
@@ -36,15 +58,19 @@ body {
 }
 
 .header {
-  height: 20rem;
+  position: relative;
+  height: 30rem;
+  @media(min-width: 960px) {
+    height: 30rem;
+  }
   background-image: url("../img/landscape.png");
   background-size: cover;
-  padding: 5rem;
+  padding: 2rem 5rem;
 }
 
 .header-heading {
   font-size: 5rem;
-  @include text-style;
+  @include lighttext-style--light;
 }
 
 .header__heading { //positioning
@@ -56,15 +82,57 @@ body {
 }
 
 .header-text {
-  @include text-style;
+  @include lighttext-style--light;
   font-size: 1.08rem;
+  @media(min-width: 640px) {
+    max-width: 50%;
+  }
+  @media(min-width: 960px) {
+    max-width: 30%;
+  }
+}
 
+.header-img { //block styles
+  width: 30%;
+}
+
+.header__img { // block positioning
+  display: none;
+  position: absolute;
+  @media(min-width: 960px) {
+    display: block;
+    top:40%;
+    left: 60%;
+
+  }
 }
 
 
 
+.tier-header {
+  font-size: 2.5rem;
+  @include lighttext-style--dark;
+}
+
+.tier__header {
+}
+
+.tier-text {
+
+  @include text-style;
+  text-align: justify;
+
+  @media(min-width: 720px) {
+    width: 50%;
+  }
+
+}
+
+.tier__text {
+
+}
 
 
 .tier {
-
+  padding: 2rem 5rem;
 }
