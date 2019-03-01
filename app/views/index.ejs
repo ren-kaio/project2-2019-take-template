@@ -39,6 +39,20 @@
         </div>
     <% i++; } %>
 </div>
+<div class="details">
+    <h2 class="details__header details-header">A look at the details</h2>
+    <%
+    let detailsItemHeaders = ["Web based", "Performance", "Cultural", "Sustainability"];
+    let j =0;  while(j!=4) { %>
+    <div class="details__item details-item">
+        <h3 class="details-item__header"><%=detailsItemHeaders[j];%></h3>
+        <p class="details-item__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+    </div>
+    <% j++; } %>
+</div>
 
 
 <% include partials/footer.ejs %>

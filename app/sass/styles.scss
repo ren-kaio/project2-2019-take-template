@@ -17,6 +17,20 @@
   font-weight: normal;
 }
 
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-SemiBold";
+  src: url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
 
 // mixins
 $text-color--lighter: #fff;
@@ -40,6 +54,10 @@ $text-color--dark: #282a2a;
 @mixin text-style {
   color: $text-color--light;
   font-family: "OpenSans";
+}
+@mixin boldtext-style--light {
+  color: $text-color--lighter;
+  font-family: "OpenSans-Bold";
 }
 
 // common styles
@@ -326,7 +344,72 @@ body {
 }
 
 .box__more {
-  @include lighttext-style--light;
+  @include boldtext-style--light;
+}
+
+
+// details
+.details {
+  @include lighttext-style;
+
+  margin-top: 17rem; // отступы вынести в отдельный класс, который отвечает за позиционирование?
+  @media(min-width: 400px) {
+    margin-top:10rem;
+  }
+  @media(min-width: 480px) {
+    margin-top:0;
+    margin-left: 1rem;
+  }
+}
+
+.details__header {
+  margin-left: 1rem;
+  @media(min-width: 450px) {
+    margin-left: 3rem;
+
+  }
+
+}
+.details-header {
+  font-size: 2.9rem; //35pt
+  font-weight: lighter;
+}
+.details__item {
+
+  margin-left: 2%;
+  margin-right: 2%;
+
+  @media(min-width: 1024px) {
+    margin-left: .5rem;
+    margin-right: .5rem;
+  }
+
+
+}
+.details-item {
+  display: inline-block;
+  font-size: 1.16rem; //14pt;
+  line-height: 2rem; //24pt;
+  width:96%;
+
+
+  @media(min-width: 768px) {
+    width:45%;
+  }
+
+  @media(min-width: 1024px) {
+    width:22%;
+  }
+
+}
+
+.details-item__header {
+  font-family: "OpenSans-SemiBold", sans-serif;
+  font-weight: bold;
+}
+
+.details-item__text {
+
 }
 
 
