@@ -46,6 +46,7 @@ $text-color--dark: #282a2a;
 
 body {
   margin: 0;
+  overflow-x: hidden;
 
   @media (min-width: 1200px) {
     padding-left: 10rem;
@@ -134,24 +135,55 @@ body {
 .tier {
   // padding: 2rem 5rem;
   display: grid;
-  height: 30rem;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 20% 20% 20%;
-  grid-template-areas: "header--left ."
-                       "text--left text--right " ;
-  // display: inline-flex; // попр сделать через grid
-  // flex-direction: column; //
-  // flex-wrap: wrap; //
+  height:70rem;
+  grid-template-columns: 100%;
+  grid-template-rows: 15% 45% 25%;
+  grid-template-areas: "header--left"
+                       "text--left"
+                        "text--right " ;
+  padding-top: 3rem;
+
+
+  @media(min-width: 360px) {
+    height: 65rem;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 45% 25%;
+    padding-top: 0;
+  }
+  @media(min-width: 410px) {
+    grid-template-rows: 15% 40% 25%;
+  }
+  @media(min-width: 430px) {
+    height: 50rem;
+    grid-template-rows: 15% 55% 30%;
+  }
 
   @media(min-width: 480px) {
-    grid-template-rows: 20% 20% 20% ;
+    height: 45rem;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 50% 35%;
+    /*   // было:
+    height: 60rem;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 36% 30%;*/
+  }
+  @media(min-width: 600px) {
+    height: 40rem;
+
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 40% 30%;
+
+    grid-template-areas: "header--left ."
+    "text--left text--right " ;
   }
 
   @media(min-width: 1100px) {
-   grid-template-rows: 25% 20% 20% ;
+    height: 30rem;
+   grid-template-rows: 25% 20% 55% ;
   }
   @media(min-width: 1400px) {
-    grid-template-rows: 40% 30% 20% ;
+    height: 34rem;
+    grid-template-rows: 40% 40% 10% ;
   }
 }
 
@@ -161,6 +193,7 @@ body {
   font-weight: lighter;
   justify-self: center;
   align-self: end;
+  padding-left: 3rem;
 }
 
 .tier__header {
@@ -182,7 +215,8 @@ body {
 .tier__text {
  // justify-content: flex-start; //
   grid-area: text--left;
-  margin-left: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .tier__text--right {
@@ -192,37 +226,107 @@ body {
 
 
 .box {
+  width: 98%;
+  height: 80rem;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 25% 25% 25% 25%;
-  grid-template-areas: "item1 item2 item3 item4"
-                      "item-double item5 item6";
+  grid-template-columns: 100%;
+  grid-template-areas: "item0"
+  " item1"
+  " item2 "
+  " item3"
+  "item4"
+  " item5"
+  " item6";
+  margin: .5rem;
+  /*
 
+  grid-template-areas: "header--left ."
+  "text--left text--right " ;
+  */
+
+
+
+  @media(min-width: 480px) {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas: "item0 item1"
+    " item2 item3"
+    "item4 item4"
+    " item5 item6";
+    margin: .5rem;
+    /*
+
+    grid-template-areas: "header--left ."
+    "text--left text--right " ;
+    */
+
+  }
+
+
+  @media(min-width: 600px) {
+    margin-top: 10rem;
+
+  }
+
+  @media(min-width: 760px) {
+    height: 42rem;
+    line-height: 1rem;
+    margin-top: 2rem;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "item0 item1 item2 item3"
+    "item4 item4 item5 item6";
+  }
 }
 
+.box-item {
+  @include lighttext-style--light;
+  font-size: 1rem; //13pt
+  line-height:1.5rem ;
+  padding: .5rem;
+  @media(min-width: 960px) {
+    line-height: 2rem; //24pt
+  }
+  }
 
+
+.box-item0 {
+  grid-area: item0;
+  background: #df969b;
+  }
 .box-item1 {
   grid-area: item1;
-  }
+  background: #615f7b;
+}
 .box-item2 {
   grid-area: item2;
+  background-image: url("../img/img2.png");
   }
 .box-item3 {
   grid-area: item3;
+  background: #af8bbc;
   }
 .box-item4 {
   grid-area: item4;
+  background: url("../img/img1.png");
   }
-.box-item-double {
-  grid-area: item-double;
-  }
+
 .box-item5 {
   grid-area: item5;
+  background: #99c89d;
   }
 .box-item6 {
   grid-area: item6;
-  }
+  background: url("../img/img3.png");
+}
 
+.box-header {
+  @include lighttext-style--light;
+  font-size: 1.875rem; //30pt
+}
 
+.box__more {
+  @include lighttext-style--light;
+}
 
 
