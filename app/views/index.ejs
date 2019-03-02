@@ -81,4 +81,22 @@
     <% k++; } %>
 </div>
 
+<section class="purchases">
+    <%
+    let purchasesHeaders = ["Go it solo", "Team plan"];
+    let prices = [ 9, 18];
+    let f =0;  while(f!=2) { %>
+    <article  class="purchases__item purchases-item">
+        <h3 class="purchases-item__header "><%=purchasesHeaders[f];%></h3>
+        <p class="purchases-item__info">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        </p>
+        <button class="purchases-item__btn">Buy now $ <%=prices[f];%></button>
+        <p><img src="../img/windows-apple.png" /></p>
+    </article>
+    <% f++; } %>
+</section>
+
 <% include partials/footer.ejs %>

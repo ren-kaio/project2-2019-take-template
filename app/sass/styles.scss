@@ -37,7 +37,7 @@ $text-color--lighter: #fff;
 $text-color--light: #939393;
 $text-color: #8796a5;
 $text-color--dark: #282a2a;
-
+$btn-bg: #9ac99d;
 
 @mixin lighttext-style--light {
   color: $text-color--lighter;
@@ -459,3 +459,69 @@ body {
   }
 
 }
+
+// purchases
+
+.purchases {
+  background: #f6f7fa;
+  padding: 5rem 0;
+
+
+}
+
+.purchases-item {
+  display: inline-block;
+  background: #f6f7fa;
+  width: 90%;
+  margin: 2%;
+  padding: 1rem;
+
+
+  @media(min-width: 768px) {
+    width: 36%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+  }
+
+  &:hover {
+    background: #fff;
+    box-shadow: 0 0 7px 5px #dde;
+    cursor: pointer;
+  }
+
+}
+
+.purchases__item {
+}
+
+.purchases-item--active {
+
+}
+
+.purchases-item__header {
+  font-size: 1.875rem; //30pt
+  @include lighttext-style--dark;
+
+}
+.purchases-item__info {
+  @include lighttext-style;
+}
+
+.purchases-item__btn {
+
+  @include  boldtext-style--light;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: .2rem;
+  text-transform: uppercase;
+  font-size: 1rem; //13pt
+  background: $btn-bg;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+
