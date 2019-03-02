@@ -1,10 +1,49 @@
 
-    <footer>
-        <div class="">
+    <footer class="footer">
+        <div class="footer__col footer-col">
+            <div class="footer-col__touch">
+                <h3 class="footer-col__header">Get in touch</h3>
+                <p class="col-touch__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+            <div class="footer-col__touch">
+                <h3 class="footer-col__header">Stay in touch</h3>
+                <form class="footer-col__form"><input type="email" class="footer-col__input">
+                    <a href="#" class="footer-col_btn" ><img src="img/ok-btn.png"></a>
+                    <br/>
+                <label class="footer-col__label">
+                    We don’t send spam. Actually, who are we kiding, we’ll spam
+                    the shit out of you’r inbox
+                </label>
+                </form>
 
+            </div>
 
         </div>
+        <div class="footer__col footer-col">
 
+            <% let m=0;
+            let listHeaders = ["Resources", "Features", "How to's "];
+            let list = ["Tour", "Customers",
+                "Pricing and Plans",
+                "New Features",
+                "Education" ]
+            while (m<listHeaders.length) { %>
+            <section class="footer-col__links">
+                <h4 class="footer-col__header"><%=listHeaders[m]; %></h4>
+                <ul class="footer-col__list">
+                    <% for(let n =0; n<list.length; n++) { %>
+                    <li class=" "><a href="#" class="footer-col__link"><%=list[n];%></a></li>
+                    <% } %>
+                </ul>
+            </section>
+
+            <% m++ } %>
+        </div>
+
+        <!--  !!!!!!!!!!! ДОДЕЛАТЬ ФУТЕР + СДЕЛАТЬ LABEL ДЛЯ УРОВНЯ purchases !!!!!!!!!!!!!!!  -->
 
 
     </footer>
