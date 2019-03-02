@@ -66,19 +66,19 @@
 </div>
 
 
-<div class="details details--onboard">
+<div class="reasons">
     <h2 class="details__header details-header">Reasons to get onboard</h2>
     <%
-    let detailsItemHeaders2 = ["Web based", "Team login", "Great support"];
-    let k =0;  while(k!=3) { %>
-    <div class="details__item details-item details-item--onboard">
-        <h3 class="details-item__header"><%=detailsItemHeaders2[k];%></h3>
+    let detailsItemHeaders2 = ["Web based", "Performance", "Cultural", "Sustainability"];
+    let j =0;  while(j!=4) { %>
+    <div class="details__item details-item">
+        <h3 class="details-item__header"><%=detailsItemHeaders[j];%></h3>
         <p class="details-item__text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
     </div>
-    <% k++; } %>
+    <% j++; } %>
 </div>
 
 <% include partials/footer.ejs %>

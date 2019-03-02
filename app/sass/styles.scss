@@ -412,4 +412,50 @@ body {
 
 }
 
+.power {
+  background-image: url("../img/auto.png");
+  padding: 1rem;
+  @media(min-width: 768px) {
+    padding: 15rem 20rem 7rem 3rem;
+  }
 
+}
+
+.power__header {
+  font-size: 5rem; //60pt
+  line-height: 5rem;
+  max-width: 45rem;
+}
+
+.power__text {
+  max-width: 30rem;
+}
+
+
+
+//details--onboard
+
+.details--onboard {
+  background: #9ac99d;
+  color: $text-color--lighter;
+
+  padding-left: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  // мб лучше вынести отступы в отдельный класс?
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.details-item--onboard {
+
+  @media(min-width: 768px) {
+    width:24%;
+  }
+
+  @media(min-width: 1024px) {
+    width:30%;
+  }
+
+}
