@@ -474,7 +474,9 @@ body {
   background: #f6f7fa;
   width: 90%;
   margin: 2%;
-  padding: 1rem;
+  padding: 3rem;
+  box-sizing: border-box;
+
 
 
   @media(min-width: 768px) {
@@ -488,7 +490,22 @@ body {
     background: #fff;
     box-shadow: 0 0 7px 5px #dde;
     cursor: pointer;
+
+
+    .purchases-item__label {
+      background: #af8bbc;
+    }
   }
+
+}
+
+.purchases-item__label {
+  @include boldtext-style--light;
+  text-transform: uppercase;
+  background: #e0e0e0;
+  font-size: .9rem;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
 
 }
 
@@ -520,6 +537,8 @@ body {
 
   &:hover {
     cursor: pointer;
+
+
   }
 }
 
@@ -536,7 +555,12 @@ body {
 
 .footer-col__touch {
   display: inline-block;
-  width: 45%;
+  vertical-align: top;
+  margin: 1rem;
+
+  @media(min-width: 768px) {
+    width: 45%;
+  }
   padding-left: 1rem;
 
 }
@@ -563,10 +587,11 @@ body {
   }
 
 .footer-col__form {
-  vertical-align: top;
+
 }
 
 .footer-col__link {
+  display: inline-block;
   @include  lighttext-style--light;
   text-decoration: none;
 
@@ -575,14 +600,32 @@ body {
   }
 }
 
+.footer-col__container {
+  position: relative;
+  padding: 0;
+  margin: 1rem;
+}
+
 .footer-col__input {
+
+  display: inline-block;
   padding: 1rem 2rem;
-  width: 50%;
+  width: 80%;
 }
 
 .footer-col__btn {
-  background: url("../img/ok-btn.png");
-  width: 6rem;
-  height: 6rem;
+  height: 3.2rem;
+  width: 3.2rem;
 
+}
+
+.btn__img {
+  position: absolute;
+  top:0;
+  right: 0;
+  height: 3.2rem;
+}
+
+.footer-col__label {
+  color: #5d697d;
 }
